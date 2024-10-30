@@ -1,7 +1,7 @@
 TTD A
 TTKT G
-C E F
 A B C D
+C E F
 D C F
 F K
 B I G

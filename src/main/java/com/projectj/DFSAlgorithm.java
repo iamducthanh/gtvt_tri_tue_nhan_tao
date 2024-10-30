@@ -6,7 +6,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,7 +32,7 @@ public class DFSAlgorithm {
     }
 
     // Hàm đọc đồ thị từ file
-    public static Map<String, List<String>> readGraphFromFile(String filename, Map<String, String> tt) throws IOException {
+    public static Map<String, List<String>> readGraphFromFile(String filename, Map<String, String> trangThai) throws IOException {
         Map<String, List<String>> graph = new HashMap<>();
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String line;
@@ -43,7 +42,7 @@ public class DFSAlgorithm {
             String[] parts = line.split(" ");
             if (j <= 1) {
                 if (parts.length > 1) {
-                    tt.put(parts[0], parts[1]);
+                    trangThai.put(parts[0], parts[1]);
                 }
             } else {
                 String node = parts[0];
