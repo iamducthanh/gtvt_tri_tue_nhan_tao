@@ -51,7 +51,7 @@ public class HillClimbingSearch {
 
     public static void main(String[] args) {
         String start = "A20";
-        String end = "E7";
+        String end = "G5";
         Graph g = new Graph();
         try (BufferedReader br = new BufferedReader(new FileReader("graph-inputHillClimbing.txt"))) {
             String line;

@@ -117,8 +117,8 @@ public class DFSAlgorithm {
     // Ghi kết quả ra file output
     public static void writeOutputToFile(List<String> result, List<String[]> log, String filename) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-        String format = "%35s|%35s|%35s|%35s";
-        writer.write(String.format("%35s|%33s|%33s|%35s", "Trạng thái phát triển", "Trạng thái liền kề", "Danh sách Q", "Danh sách L") + "\n");
+        String format = "%-25s|%-25s|%-25s|%-25s";
+        writer.write(String.format("%-25s|%-23s|%-23s|%-25s", "Trạng thái phát triển", "Trạng thái liền kề", "Danh sách Q", "Danh sách L") + "\n");
         for (String[] entry : log) {
             writer.write(String.format(format, entry[0].trim(), entry[1].trim(), entry[2].trim(), entry[3].trim()).replace("[", "").replace("]", "") + "\n");
         }
